@@ -29,7 +29,7 @@ function getuserinfo(){
 function showuserinfo(user){
   if(user.user_pic===null){
     $('.layui-nav-img').hide()
-    $('.text_avatar').show()
+    $('.text_avatar').show().html(user.nickname[0].toUpperCase())
   }
   else{
     $('.layui-nav-img').attr('src',user.user_pic).show()
